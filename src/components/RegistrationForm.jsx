@@ -105,12 +105,15 @@ const RegistrationForm = ({ onSuccess }) => {
 
     try {
       await new Promise((r) => setTimeout(r, 300));
+      const suffix = 2000 + Math.floor(Math.random() * 1000); // 2000–2999
+      const numericId = Number(`${Date.now()}${suffix}`);
 
       const uniqueId = `USER-${Date.now()}-${Math.random()
         .toString(36)
         .substr(2, 9)}`;
 
       const userData = {
+        id: numericId,
         name: formData.name.trim(),
         email: formData.email.trim(),
         uniqueId,
