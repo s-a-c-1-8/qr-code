@@ -200,7 +200,6 @@ const RegistrationForm = ({ onSuccess }) => {
 
       <form onSubmit={handleSubmit} className="registration-form">
         <div className="form-group">
-          <label htmlFor="name">Full Name *</label>
           <input
             type="text"
             id="name"
@@ -214,7 +213,6 @@ const RegistrationForm = ({ onSuccess }) => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="email">Email Address *</label>
           <input
             type="email"
             id="email"
